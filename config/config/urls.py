@@ -4,6 +4,7 @@ from user import views
 
 
 urlpatterns = [
-    path('', views.index, name='index'),
     path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
+    path('register/', views.RegisterFormView.as_view(), name='register'),
 ]
